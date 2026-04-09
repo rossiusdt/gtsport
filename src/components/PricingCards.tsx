@@ -50,6 +50,7 @@ const plans: Plan[] = [
       'Aulas exclusivas Platinum',
       'Desconto em produtos',
       'Sem taxa de adesão',
+      'Área Kids com monitores',
     ],
     highlighted: false,
     link: 'https://seguro.verifypagamentos.shop/api/public/shopify?product=2989245556387&store=29892',
