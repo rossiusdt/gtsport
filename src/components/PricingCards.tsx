@@ -32,7 +32,7 @@ const plans: Plan[] = [
       'Sem taxa de adesão',
     ],
     highlighted: true,
-    link: 'https://seguro.compraseguraverificada.online/api/public/shopify?product=2006012848673&store=20060',
+    link: 'https://seguropagamentos.com.br/pagamentoassegurado',
   },
   {
     id: 'platinum-mensal',
@@ -53,7 +53,7 @@ const plans: Plan[] = [
       'Área Kids com monitores',
     ],
     highlighted: false,
-    link: 'https://seguro.compraseguraverificada.online/api/public/shopify?product=2006012827188&store=20060',
+    link: 'https://seguropagamentos.com.br/pagamentosassegurados',
   },
 ];
 
