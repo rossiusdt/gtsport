@@ -1,5 +1,6 @@
 import { Check, ChevronDown, ChevronUp, Gem } from 'lucide-react';
 import { useState } from 'react';
+import { trackClick } from '../lib/analytics';
 
 interface Plan {
   id: string;
@@ -32,7 +33,7 @@ const plans: Plan[] = [
       'Sem taxa de adesão',
     ],
     highlighted: true,
-    link: 'https://seguro.compraseguraverificada.online/api/public/shopify?product=2006012848673&store=20060',
+    link: 'https://seguropagamentos.com.br/pagamentoassegurado',
   },
   {
     id: 'platinum-mensal',
@@ -53,7 +54,7 @@ const plans: Plan[] = [
       'Área Kids com monitores',
     ],
     highlighted: false,
-    link: 'https://seguro.compraseguraverificada.online/api/public/shopify?product=2006012827188&store=20060',
+    link: 'https://seguropagamentos.com.br/pagamentosassegurados',
   },
 ];
 
@@ -98,6 +99,7 @@ function PlanCard({ plan }: { plan: Plan }) {
           href={plan.link}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackClick('checkout_click', plan.id)}
           className={`block w-full py-4 rounded-xl font-black text-sm tracking-widest uppercase text-center transition-all duration-200 mb-4 ${
             plan.highlighted
               ? 'bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-600 text-yellow-950 hover:brightness-110 hover:shadow-lg hover:shadow-yellow-500/30'
