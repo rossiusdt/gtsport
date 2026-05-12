@@ -5,10 +5,10 @@ export default function PromoBanner() {
   const [count] = useState(3);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-teal-700 via-teal-500 to-teal-700 border-b border-teal-600">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-teal-200 rounded-full -translate-y-1/2" />
-        <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-teal-200 rounded-full translate-y-1/2" />
+    <div className="relative overflow-hidden bg-yellow-400 border-b border-yellow-500">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-black rounded-full -translate-y-1/2" />
+        <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-black rounded-full translate-y-1/2" />
       </div>
 
       <div className="relative max-w-5xl mx-auto px-6 py-3.5 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">

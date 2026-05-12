@@ -30,17 +30,17 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="py-24 bg-black relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent opacity-50" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="text-teal-400 text-sm font-bold uppercase tracking-widest mb-3 block">
+          <span className="text-yellow-400 text-sm font-bold uppercase tracking-widest mb-3 block">
             Depoimentos
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             O que nossos alunos
             <br />
-            <span className="text-teal-400">estão dizendo</span>
+            <span className="text-yellow-400">estão dizendo</span>
           </h2>
         </div>
 
@@ -48,11 +48,11 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-zinc-900 border border-zinc-800 hover:border-teal-400/30 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl hover:shadow-teal-400/5"
+              className="bg-zinc-900 border border-zinc-800 hover:border-yellow-400/30 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-400/5"
             >
               <div className="flex items-center gap-1 mb-5">
                 {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-teal-400 text-teal-400" />
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 

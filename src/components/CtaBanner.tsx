@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CtaBanner() {
   return (
-    <section className="py-24 bg-teal-400 relative overflow-hidden">
+    <section className="py-24 bg-yellow-400 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-black rounded-full" />
         <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-black rounded-full" />
@@ -19,7 +19,7 @@ export default function CtaBanner() {
         </p>
         <a
           href="#planos"
-          className="inline-flex items-center gap-2 px-10 py-5 bg-black text-teal-400 font-black text-base rounded-xl hover:bg-zinc-900 transition-all duration-200 hover:scale-105 hover:shadow-2xl"
+          className="inline-flex items-center gap-2 px-10 py-5 bg-black text-yellow-400 font-black text-base rounded-xl hover:bg-zinc-900 transition-all duration-200 hover:scale-105 hover:shadow-2xl"
         >
           Ver planos agora
           <ArrowRight className="w-5 h-5" />
