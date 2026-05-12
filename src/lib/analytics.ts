@@ -10,6 +10,7 @@ function getSessionId(): string {
 }
 
 export async function trackPageView() {
+  if (!supabase) return;
   await supabase.from('page_views').insert({
     session_id: getSessionId(),
     referrer: document.referrer || '',
@@ -18,6 +19,7 @@ export async function trackPageView() {
 }
 
 export async function trackClick(event_type: string, plan_id = '') {
+  if (!supabase) return;
   await supabase.from('click_events').insert({
     session_id: getSessionId(),
     event_type,
