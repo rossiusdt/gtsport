@@ -29,18 +29,18 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gray-950 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-50" />
+    <section className="py-24 bg-black relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-3 block">
+          <span className="text-teal-400 text-sm font-bold uppercase tracking-widest mb-3 block">
             Depoimentos
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             O que nossos alunos
             <br />
-            <span className="text-orange-500">estão dizendo</span>
+            <span className="text-teal-400">estão dizendo</span>
           </h2>
         </div>
 
@@ -48,17 +48,17 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-gray-900 border border-gray-800 hover:border-orange-500/30 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/5"
+              className="bg-zinc-900 border border-zinc-800 hover:border-teal-400/30 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl hover:shadow-teal-400/5"
             >
               <div className="flex items-center gap-1 mb-5">
                 {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-orange-400 text-orange-400" />
+                  <Star key={i} className="w-4 h-4 fill-teal-400 text-teal-400" />
                 ))}
               </div>
 
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">"{t.text}"</p>
+              <p className="text-zinc-300 text-sm leading-relaxed mb-6">"{t.text}"</p>
 
-              <div className="flex items-center gap-3 pt-5 border-t border-gray-800">
+              <div className="flex items-center gap-3 pt-5 border-t border-zinc-800">
                 <img
                   src={t.avatar}
                   alt={t.name}
@@ -66,7 +66,7 @@ export default function Testimonials() {
                 />
                 <div>
                   <p className="text-white font-bold text-sm">{t.name}</p>
-                  <p className="text-gray-500 text-xs">{t.role}</p>
+                  <p className="text-zinc-500 text-xs">{t.role}</p>
                 </div>
               </div>
             </div>

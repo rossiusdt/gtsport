@@ -65,24 +65,24 @@ function PlanCard({ plan }: { plan: Plan }) {
     <div
       className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
         plan.highlighted
-          ? 'shadow-2xl shadow-yellow-500/20 ring-2 ring-yellow-500'
-          : 'ring-1 ring-zinc-700 hover:ring-yellow-700/60'
+          ? 'shadow-2xl shadow-teal-500/30 ring-2 ring-teal-400'
+          : 'ring-1 ring-zinc-700 hover:ring-teal-600/60'
       } bg-zinc-900`}
     >
       {plan.badge && (
-        <div className="bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-600 py-2.5 text-center">
+        <div className="bg-gradient-to-r from-teal-600 via-teal-400 to-teal-600 py-2.5 text-center">
           <div className="flex items-center justify-center gap-2">
-            <Gem className="w-3.5 h-3.5 text-yellow-950" />
-            <span className="text-yellow-950 text-xs font-black tracking-widest uppercase">
+            <Gem className="w-3.5 h-3.5 text-black" />
+            <span className="text-black text-xs font-black tracking-widest uppercase">
               {plan.badge}
             </span>
-            <Gem className="w-3.5 h-3.5 text-yellow-950" />
+            <Gem className="w-3.5 h-3.5 text-black" />
           </div>
         </div>
       )}
 
       <div className="p-8">
-        <p className="text-yellow-500 text-xs font-semibold mb-1">{plan.tag}</p>
+        <p className="text-teal-400 text-xs font-semibold mb-1">{plan.tag}</p>
 
         <h3 className="text-white font-black text-base uppercase tracking-tight mb-6 leading-snug">
           {plan.name}
@@ -102,8 +102,8 @@ function PlanCard({ plan }: { plan: Plan }) {
           onClick={() => trackClick('checkout_click', plan.id)}
           className={`block w-full py-4 rounded-xl font-black text-sm tracking-widest uppercase text-center transition-all duration-200 mb-4 ${
             plan.highlighted
-              ? 'bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-600 text-yellow-950 hover:brightness-110 hover:shadow-lg hover:shadow-yellow-500/30'
-              : 'bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-700 text-yellow-950 hover:brightness-110 hover:shadow-lg hover:shadow-yellow-500/20'
+              ? 'bg-gradient-to-r from-teal-600 via-teal-400 to-teal-600 text-black hover:brightness-110 hover:shadow-lg hover:shadow-teal-500/30'
+              : 'bg-gradient-to-r from-teal-700 via-teal-500 to-teal-700 text-black hover:brightness-110 hover:shadow-lg hover:shadow-teal-500/20'
           }`}
         >
           EU QUERO
@@ -113,7 +113,7 @@ function PlanCard({ plan }: { plan: Plan }) {
 
         <button
           onClick={() => setExpanded(!expanded)}
-          className="flex items-center gap-1.5 text-yellow-500 hover:text-yellow-400 font-semibold text-sm transition-colors mx-auto"
+          className="flex items-center gap-1.5 text-teal-400 hover:text-teal-300 font-semibold text-sm transition-colors mx-auto"
         >
           {expanded ? 'Ocultar detalhes' : 'Ver detalhes'}
           {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -127,8 +127,8 @@ function PlanCard({ plan }: { plan: Plan }) {
           <div className="border-t border-zinc-800 pt-5 space-y-3">
             {plan.features.map((feature) => (
               <div key={feature} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-yellow-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-yellow-400 stroke-[2.5]" />
+                <div className="w-5 h-5 rounded-full bg-teal-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-teal-400 stroke-[2.5]" />
                 </div>
                 <span className="text-zinc-300 text-sm">{feature}</span>
               </div>
