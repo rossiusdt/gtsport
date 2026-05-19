@@ -65,55 +65,51 @@ function PlanCard({ plan }: { plan: Plan }) {
     <div
       className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
         plan.highlighted
-          ? 'shadow-2xl shadow-yellow-400/25 ring-2 ring-yellow-400'
-          : 'ring-1 ring-zinc-700 hover:ring-yellow-600/60'
-      } bg-zinc-900`}
+          ? 'shadow-2xl shadow-green-600/20 ring-2 ring-green-500'
+          : 'ring-1 ring-stone-200 hover:ring-green-400/60 hover:shadow-lg'
+      } bg-white`}
     >
       {plan.badge && (
-        <div className="bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 py-2.5 text-center">
+        <div className="bg-green-600 py-2.5 text-center">
           <div className="flex items-center justify-center gap-2">
-            <Gem className="w-3.5 h-3.5 text-black" />
-            <span className="text-black text-xs font-black tracking-widest uppercase">
+            <Gem className="w-3.5 h-3.5 text-white" />
+            <span className="text-white text-xs font-black tracking-widest uppercase">
               {plan.badge}
             </span>
-            <Gem className="w-3.5 h-3.5 text-black" />
+            <Gem className="w-3.5 h-3.5 text-white" />
           </div>
         </div>
       )}
 
       <div className="p-8">
-        <p className="text-yellow-400 text-xs font-semibold mb-1">{plan.tag}</p>
+        <p className="text-green-600 text-xs font-semibold mb-1">{plan.tag}</p>
 
-        <h3 className="text-white font-black text-base uppercase tracking-tight mb-6 leading-snug">
+        <h3 className="text-stone-900 font-black text-base uppercase tracking-tight mb-6 leading-snug">
           {plan.name}
         </h3>
 
         <div className="flex items-end gap-0.5 mb-1">
-          <span className="text-zinc-400 text-sm font-medium mr-1 mb-3">R$</span>
-          <span className="text-7xl font-black text-white leading-none">{plan.price}</span>
-          <span className="text-2xl font-bold text-zinc-300 mb-1.5">{plan.cents}</span>
+          <span className="text-stone-400 text-sm font-medium mr-1 mb-3">R$</span>
+          <span className="text-7xl font-black text-stone-900 leading-none">{plan.price}</span>
+          <span className="text-2xl font-bold text-stone-600 mb-1.5">{plan.cents}</span>
         </div>
-        <p className="text-zinc-500 text-sm mb-7">{plan.period}</p>
+        <p className="text-stone-400 text-sm mb-7">{plan.period}</p>
 
         <a
           href={plan.link}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackClick('checkout_click', plan.id)}
-          className={`block w-full py-4 rounded-xl font-black text-sm tracking-widest uppercase text-center transition-all duration-200 mb-4 ${
-            plan.highlighted
-              ? 'bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-black hover:brightness-110 hover:shadow-lg hover:shadow-yellow-400/30'
-              : 'bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 text-black hover:brightness-110 hover:shadow-lg hover:shadow-yellow-400/20'
-          }`}
+          className="block w-full py-4 rounded-xl font-black text-sm tracking-widest uppercase text-center transition-all duration-200 mb-4 bg-green-600 hover:bg-green-700 text-white hover:shadow-lg hover:shadow-green-600/25"
         >
           EU QUERO
         </a>
 
-        <p className="text-center text-zinc-600 text-xs mb-5">{plan.note}</p>
+        <p className="text-center text-stone-400 text-xs mb-5">{plan.note}</p>
 
         <button
           onClick={() => setExpanded(!expanded)}
-          className="flex items-center gap-1.5 text-yellow-400 hover:text-yellow-300 font-semibold text-sm transition-colors mx-auto"
+          className="flex items-center gap-1.5 text-green-600 hover:text-green-700 font-semibold text-sm transition-colors mx-auto"
         >
           {expanded ? 'Ocultar detalhes' : 'Ver detalhes'}
           {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -124,13 +120,13 @@ function PlanCard({ plan }: { plan: Plan }) {
             expanded ? 'max-h-96 opacity-100 mt-5' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="border-t border-zinc-800 pt-5 space-y-3">
+          <div className="border-t border-stone-100 pt-5 space-y-3">
             {plan.features.map((feature) => (
               <div key={feature} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-yellow-400/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-yellow-400 stroke-[2.5]" />
+                <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-green-600 stroke-[2.5]" />
                 </div>
-                <span className="text-zinc-300 text-sm">{feature}</span>
+                <span className="text-stone-600 text-sm">{feature}</span>
               </div>
             ))}
           </div>
